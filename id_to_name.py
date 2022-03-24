@@ -4,6 +4,7 @@ import pandas as pd
 
 
 def id_to_name(source, target, t_column):
+    print('Start!')
     df_brands = pd.read_csv(source)
     df_products = pd.read_csv(target)
 
@@ -15,6 +16,7 @@ def id_to_name(source, target, t_column):
         increment += 1
 
     df_products.to_csv('replaced-list.csv')
+    print('Done.')
 
 
 id_to_name('mock-brands.csv', 'mock-products.csv', 'Producer')
