@@ -5,17 +5,17 @@ import pandas as pd
 
 def id_to_name(source, target, t_column):
     print('Start!')
-    df_brands = pd.read_csv(source)
-    df_products = pd.read_csv(target)
+    dfs = pd.read_csv(source)
+    dft = pd.read_csv(target)
 
-    brand_map = dict(df_brands.values)
+    brand_map = dict(dfs.values)
     increment = 0
 
-    for value in df_products[t_column]:
-        df_products[t_column][increment] = brand_map[value]
+    for value in dft[t_column]:
+        dft[t_column][increment] = brand_map[value]
         increment += 1
 
-    df_products.to_csv('replaced-list.csv')
+    dft.to_csv('replaced-list.csv')
     print('Done.')
 
 
