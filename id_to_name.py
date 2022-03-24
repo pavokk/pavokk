@@ -7,7 +7,6 @@ def id_to_name(source, target, t_column):
     print('Start!')
     dfs = pd.read_csv(source)
     dft = pd.read_csv(target)
-
     brand_map = dict(dfs.values)
     increment = 0
 
