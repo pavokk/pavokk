@@ -1,4 +1,5 @@
 import pandas as pd
+pd.options.mode.chained_assignment = None # Ignoring a pandas error
 
 # Replaces a column with ID's in 1 file with a mapping from another file. The mapping-file can only have 2 columns.
 
