@@ -53,13 +53,3 @@ def id_to_name(mapfile, sourcefile, columns):
 
     df_source.to_csv('data/output/skvis-new-cats.csv')
     print('done.')
-
-
-def mystore_attributes_fix(sourcefile, modelnumber, columns):
-
-    returned_col = ['Artikkelnummer', 'Navn', 'Verdi']
-
-    df_source = pd.read_csv(sourcefile)
-    df_return = pd.DataFrame(columns=returned_col)
-
-
